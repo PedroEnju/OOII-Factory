@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content  %}
+    <h1>Últimas postagens</h1>
+
+    {% if posts %}
+    	{% for p in posts %}
+    		<h1>{{ p.titulo }}</h1>
+    		<img src="{{ p.miniatura }}"/>
+    		{{ p.conteudo }}
+    		{{ p.autor }}
+    	{% endfor %}
+    {% endif %}
+
+{% endblock %}

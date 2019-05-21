@@ -8,4 +8,7 @@ return function(RoutingConfigurator $routes){
 	
 	$routes->add('produto','/produto')
 		->controller(['Site\Produto','listarProdutos']);
+
+	$routes->add('blog','/blog')
+		->controller(['Site\Blog','ultimasPostagens']);
 };

@@ -1,22 +1,24 @@
 {
-	"name":"Minha app incrivel",
-	"require":{
-		"symfony/http-foundation": "^4.2",
-		"symfony/routing":"^3.4",
-		"symfony/config": "^4.2",
-		"twig/twig": "^2.8",
-		"filp/whoops": "^2.3"
-	},
-	"autoload":{
-		"psr-4":{
-			"Site\\":"src/Site/",
-			"Contracts\\":"src/Contracts",
-			"Helpers\\":"src/Helpers",
-                        "Models\\":"src/Models",
-                        "Factories\\":"src/Factories"
-		}
-	},
-	"scripts":{
-		"serve":"php -S localhost:8080 -t public public/index.php"
-	}
+    "name":"Minha app incrivel",
+    "require":{
+        "symfony/http-foundation": "^4.2",
+        "symfony/routing":"^3.4",
+        "symfony/config": "^4.2",
+        "twig/twig": "^2.8",
+        "filp/whoops": "^2.3"
+    },
+    "autoload":{
+        "psr-4":{
+            "Site\\":"src/Site/",
+            "Contracts\\":"src/Contracts",
+            "Helpers\\":"src/Helpers",
+            "Models\\":"src/Models",
+            "Factories\\":"src/Factories",
+            "Services\\":"src/Services",
+            "Config\\Post\\":"config/Post"
+        }
+    },
+    "scripts":{
+        "serve":"php -S localhost:8080 -t public public/index.php"
+    }
 }
