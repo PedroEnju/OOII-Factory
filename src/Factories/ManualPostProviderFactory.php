@@ -7,7 +7,8 @@ use \Services\ManualPostProvider;
 class ManualPostProviderFactory extends AbstractFactoryPostProvider
 {
     
-    public function create() {
+    public function create()
+	{
         return new ManualPostProvider();
     }
 
