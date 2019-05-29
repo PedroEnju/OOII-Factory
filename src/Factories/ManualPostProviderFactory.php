@@ -4,8 +4,7 @@ namespace Factories;
 
 use \Services\ManualPostProvider;
 
-class ManualPostProviderFactory extends AbstractFactoryPostProvider
-{
+class ManualPostProviderFactory extends AbstractFactoryPostProvider {
     
     public function create()
 	{

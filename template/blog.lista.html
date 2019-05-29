@@ -3,12 +3,14 @@
     <h1>Últimas postagens</h1>
 
     {% if posts %}
-    	{% for p in posts %}
-    		<h1>{{ p.titulo }}</h1>
-    		<img src="{{ p.miniatura }}"/>
-    		{{ p.conteudo }}
-    		{{ p.autor }}
-    	{% endfor %}
+        {% for p in posts %}
+            <a href="/blog/{{ p.id }}">
+                <h1>{{ p.titulo }}</h1>
+                <img src="{{ p.miniatura }}"/>
+                {{ p.conteudo }}
+                {{ p.autor }}
+            </a>
+        {% endfor %}
     {% endif %}
 
 {% endblock %}

@@ -9,4 +9,6 @@ interface PostProviderInterface {
     */
     public function getUltimos();
 
+    public function getById($id);
+    
 }
