@@ -2,15 +2,39 @@
 {% block content  %}
     <h1>Últimas postagens</h1>
 
+    <form method="POST" action="/blog/pesquisar">
+        <div class="input-group mb-3">
+            <input type="text" name="pesquisa" class="form-control" placeholder="Pesquisar" autocomplete="off">
+            <div class="input-group-append">
+                <button class="btn btn-info" type="submit">Pesquisa</button>
+            </div>
+        </div>
+        <hr>
+    </form>
+
     {% if posts %}
         {% for p in posts %}
-            <a href="/blog/{{ p.id }}">
                 <h1>{{ p.titulo }}</h1>
-                <img src="{{ p.miniatura }}"/>
+                <a href="/blog/{{ p.id }}">
+                    <img src="{{ p.miniatura }}"/>
+                </a>
                 {{ p.conteudo }}
                 {{ p.autor }}
-            </a>
+
+            <!-- <div class="carousel-item">
+                <a href="/blog/{{ p.id }}">
+                    <img src="{{ p.miniatura }}"/>
+                </a>
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>{{ p.titulo }}</h5>
+                    <p>{{ p.autor }}</p>
+                    <p>{{ p.conteudo }}</p>
+                </div>
+            </div> -->
+            
         {% endfor %}
+    {% else %}
+        <p class="h4 text-warning font-style-bold">Não foi encontrado nada!</p>
     {% endif %}
 
 {% endblock %}

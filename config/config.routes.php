@@ -16,4 +16,7 @@ return function(RoutingConfigurator $routes){
 		->controller(['Site\Blog','viewpost'])
 		->defaults(['post' => 0])
 		->requirements(['post' => '\d+']);
+
+	$routes->add('blogp','/blog/pesquisar')
+		->controller(['Site\Blog','pesquisar']);
 };
