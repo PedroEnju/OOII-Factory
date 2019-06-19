@@ -14,24 +14,12 @@
 
     {% if posts %}
         {% for p in posts %}
-                <h1>{{ p.titulo }}</h1>
                 <a href="/blog/{{ p.id }}">
-                    <img src="{{ p.miniatura }}"/>
+                    <h1>{{ p.titulo }}</h1>
                 </a>
+                <img src="{{ p.miniatura }}"/>
                 {{ p.conteudo }}
                 {{ p.autor }}
-
-            <!-- <div class="carousel-item">
-                <a href="/blog/{{ p.id }}">
-                    <img src="{{ p.miniatura }}"/>
-                </a>
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>{{ p.titulo }}</h5>
-                    <p>{{ p.autor }}</p>
-                    <p>{{ p.conteudo }}</p>
-                </div>
-            </div> -->
-            
         {% endfor %}
     {% else %}
         <p class="h4 text-warning font-style-bold">Não foi encontrado nada!</p>
